@@ -1,7 +1,5 @@
 /*
  * Blink
- * Turns on an LED on for one second,
- * then off for one second, repeatedly.
  */
 
 #include <Arduino.h>
@@ -20,7 +18,7 @@ void go_deep_sleep()
   // init gpio for deep sleep
   rtc_gpio_init(LED_BUILTIN);
   rtc_gpio_set_direction(LED_BUILTIN, RTC_GPIO_MODE_OUTPUT_ONLY);
-  rtc_gpio_set_level(LED_BUILTIN, HIGH); // POWERSAVE on
+  rtc_gpio_set_level(LED_BUILTIN, HIGH);
   gpio_hold_en(LED_BUILTIN);
 
   // init wake sources
